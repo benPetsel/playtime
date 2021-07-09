@@ -3,22 +3,39 @@
 <head>
   <meta charset="UTF-8"/>
 <title>Alien Invasion</title>
-  
+
+
+<script type="text/javascript" >
+
+window.onload = function(){
+                var bsDiv = document.getElementById("redbox");
+                var x, y;
+    // On mousemove use event.clientX and event.clientY to set the location of the div to the location of the cursor:
+                window.addEventListener('mousemove', function(event){
+                    x = event.clientX -105;
+                    y = event.clientY -145;                    
+                    if ( typeof x !== 'undefined' ){
+                        bsDiv.style.left = x + "px";
+                        bsDiv.style.top = y + "px";
+                    }
+                }, false);
+            }
+</script>
 </head>
 <style>
     
-    .redbox{
+    #redbox{
+      position:absolute;
         background-color: red;
         width: 200px;
         padding: 10px;
-        font-family: ;
     }
     
 </style>
 <body>
 <h1> HI SHANNA!!</h1>
 
-<div class='redbox'><p>(Reuters) -A higher-than-expected number 
+<div id='redbox'><p>(Reuters) -A higher-than-expected number 
     of young men have experienced heart inflammation
      after their second dose of the mRNA COVID-19 shots
       from Pfizer/BioNTech and Moderna, according to data
@@ -26,13 +43,13 @@
        Centers for Disease Control and Prevention (CDC) said 
        on Thursday.  </p></div>
 
-       <div class="redbox"></div>
+       
        <blockquote>
            <p>-Ben Rocks!!</p>
        </blockquote>
-  <div id='container'>
-    <canvas id='game' width='320' height='480'></canvas>
-  </div>
-  <script src='game.js'></script>
+
+
+ 
 </body>
+
 </html>
